@@ -1,0 +1,10 @@
+.btn {
+  @apply rounded-lg px-3 py-2 bg-gray-100;
+}
+.btn.btn-primary {
+  @apply bg-blue-500 text-white;
+}
+.btn.btn-secondary {
+  background-color: theme('colors.gray.500');
+  @apply text-white;
+}

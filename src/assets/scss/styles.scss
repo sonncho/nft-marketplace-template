@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import
+  // 'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+@import
+	'components/buttons',
+	'components/dropdown';
+
+@import
+	'layouts/navbar',
+	'layouts/content',
+	'layouts/sidebar';
