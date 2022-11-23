@@ -15,6 +15,7 @@ coverage
 *.local
 pnpm-lock.yaml
 .env.production
+.eslintcache
 
 /cypress/videos/
 /cypress/screenshots/
