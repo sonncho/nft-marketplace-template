@@ -17,6 +17,13 @@ const config = {
   darkMode: 'class',
   theme: {
     // colors: {},
+    borderRadius: {
+      none: '0',
+      sm: '.125rem',
+      default: '.8rem',
+      lg: '1.25rem',
+      full: '9999px',
+    },
     extend: {},
   },
   plugins: [],

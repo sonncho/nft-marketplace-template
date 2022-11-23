@@ -5,9 +5,7 @@
       <RouterLink to="/about">About</RouterLink> |
       <RouterLink to="/admin">Admin</RouterLink>
     </nav>
-    <s-button @click="onClickButton" variant="primary mb-2" class="mb-5"
-      >My Button
-    </s-button>
+    <s-button @click="onClickButton" variant="primary">My Button</s-button>
   </header>
 </template>
 

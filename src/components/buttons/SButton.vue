@@ -21,17 +21,29 @@ export default {
       type: String,
       default: 'secondary',
     },
+    sm: Boolean,
+    md: {
+      type: Boolean,
+      default: true,
+    },
+    lg: Boolean,
     pill: Boolean,
   },
   setup(props) {
     const button = ref(null);
-    const classes = ['btn'];
+    let classes = ['btn'];
     if (props.variant) {
-      const variant = props.variant.split();
-      variant[0] = `btn-${variant}`;
-      classes.push(variant);
+      const variant = props.variant.split(' ');
+      variant[0] = `btn-${variant[0]}`;
+      classes.push(...variant);
     }
-    console.log(classes);
+    if (props.pill) classes.push('btn-pill');
+
+    if (props.sm) classes.push('btn-sm');
+    else if (props.lg) classes.push('btn-lg');
+    else classes.push('btn-md');
+
+    console.log('classes:', classes);
     return { classes, button };
   },
 };
