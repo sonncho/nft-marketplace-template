@@ -1,25 +1,29 @@
-.navbar {
-  @apply 
-    bg-white 
-    border-b-gray-300
-    flex
-    justify-between
-    items-center
-    mx-auto
-    h-[80px];
-  .nav-item {
-    @apply flex items-center;
-  }
-  .nav-link {
-    @apply
-      text-lg
-      text-gray-500
-      font-bold 
-      h-[100%]
-      transition
-      hover:text-indigo-500;
-  }
-  .nav-link + .nav-link {
-    @apply ml-10;
+@layer components {
+  .navbar {
+    @apply 
+      bg-white 
+      border-b-gray-300
+      flex
+      justify-between
+      items-center
+      mx-auto
+      h-[80px];
+    .navbar-nav {
+      @apply flex items-center h-full;
+    }
+    .nav-link {
+      @apply h-full flex items-center px-5;
+      &.router-link-active {
+        @apply text-indigo-500;
+      }
+    }
+    .nav-item {
+      @apply
+        text-lg text-gray-500 font-bold
+        flex items-center
+        h-[100%]
+        transition
+        hover:text-indigo-500;
+    }
   }
 }

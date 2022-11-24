@@ -24,13 +24,15 @@
           </span>
         </div>
 
-        <ul class="nav-item">
-          <li class="nav-link">
-            <RouterLink to="/">Home</RouterLink>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <RouterLink to="/"  class="nav-link">Home</RouterLink>
           </li>
-          <li class="nav-link"><RouterLink to="/about">Explore</RouterLink></li>
-          <li class="nav-link">
-            <RouterLink to="/stats">Stats</RouterLink>
+          <li class="nav-item">
+            <RouterLink to="/about" class="nav-link">Explore</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink to="/stats" class="nav-link">Stats</RouterLink>
             <!-- <ul class="nav-sub-item">
               <li class="nav-sub-link">
                 <RouterLink to="/stats">subItem1</RouterLink>
@@ -43,11 +45,11 @@
               </li>
             </ul> -->
           </li>
-          <li class="nav-link">
-            <RouterLink to="/admin">Resources</RouterLink>
+          <li class="nav-item">
+            <RouterLink to="/admin" class="nav-link">Resources</RouterLink>
           </li>
           <!-- <li><RouterLink to="/admin">Admin</RouterLink></li> -->
-          <s-button @click="onClickButton" variant="link" class="ml-4">
+          <s-button @click="onClickButton" variant="link">
             <UserCircleIcon class="h-8 w-8" />
           </s-button>
           <s-button @click="onClickButton" variant="link">
