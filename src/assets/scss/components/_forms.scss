@@ -1,0 +1,37 @@
+@layer base {
+  input {
+    @apply 
+      border-2
+      border-gray-300
+      px-4
+      py-2
+      rounded-default
+      transition-colors
+      hover:border-indigo-500
+      focus:outline-indigo-400; 
+  }
+}
+@layer components {
+  .search-form {
+    @apply relative w-full mr-10 hidden md:block;
+    .search-icon {
+      @apply absolute top-0 h-full flex items-center px-4 text-gray-400;
+    }
+    input {
+      @apply
+      opacity-95
+      bg-gray-50
+      w-full
+      mr-10
+      py-4
+      pl-12
+      border-0
+      transition
+      focus:bg-white 
+      focus:opacity-100
+      hover:drop-shadow-lg
+      hover:opacity-100
+      hover:bg-white;
+    }
+  }
+}

@@ -1,8 +1,8 @@
 <template>
-  <div class="user">
+  <section class="user">
     <the-navbar />
     <the-content />
-  </div>
+  </section>
 </template>
 
 <script>

@@ -1,0 +1,25 @@
+.navbar {
+  @apply 
+    bg-white 
+    border-b-gray-300
+    flex
+    justify-between
+    items-center
+    mx-auto
+    h-[80px];
+  .nav-item {
+    @apply flex items-center;
+  }
+  .nav-link {
+    @apply
+      text-lg
+      text-gray-500
+      font-bold 
+      h-[100%]
+      transition
+      hover:text-indigo-500;
+  }
+  .nav-link + .nav-link {
+    @apply ml-10;
+  }
+}
