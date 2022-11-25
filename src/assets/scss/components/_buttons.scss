@@ -1,6 +1,9 @@
 @layer components {
   .btn {
-    @apply px-4 py-3 bg-gray-100 rounded-default;
+    @apply 
+      px-4 py-3 
+    bg-gray-100
+    rounded-default;
     &:hover {
       @apply transition duration-300 ease-in-out bg-gray-200;
     }
@@ -9,6 +12,11 @@
       &:hover {
         @apply bg-indigo-700
       }
+    }
+    &.btn-primary-outline {
+      @apply 
+        bg-white dark:bg-gray-700
+        border border-indigo-600;
     }
     &.btn-secondary {
       @apply text-white bg-gray-500;

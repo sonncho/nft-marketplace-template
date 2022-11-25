@@ -1,5 +1,5 @@
 <template>
-  <header class="border border-b-gray-200 fixed w-full">
+  <header>
     <div class="container mx-auto px-2 :md:px-4">
       <nav class="navbar">
         <div class="nabar-brand mr-12 flex-shrink-0">
@@ -26,7 +26,7 @@
 
         <ul class="navbar-nav">
           <li class="nav-item">
-            <RouterLink to="/"  class="nav-link">Home</RouterLink>
+            <RouterLink to="/" class="nav-link">Home</RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink to="/about" class="nav-link">Explore</RouterLink>

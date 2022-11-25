@@ -1,14 +1,19 @@
-.fade-transform-leave-active,
-.fade-transform-enter-active {
-  transition: all .5s;
+@layer components {
+ .content {
+    @apply
+      min-h-[100vh]
+      pt-[82px];
+ } 
 }
-
-.fade-transform-enter {
-  opacity: 0;
-  transform: translateX(-30px);
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: all 0.5s ease;
 }
-
-.fade-transform-leave-to {
+.slide-fade-enter {
+  transform: translateX(40px);
   opacity: 0;
-  transform: translateX(30px);
+}
+.slide-fade-leave-to {
+  transform: translateX(-40px);
+  opacity: 0;
 }
