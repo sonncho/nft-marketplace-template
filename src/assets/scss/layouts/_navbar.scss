@@ -14,7 +14,7 @@
       justify-between
       items-center
       mx-auto
-      h-[80px];
+      h-[70px];
     .navbar-nav {
       @apply flex items-center h-full;
     }
@@ -26,7 +26,7 @@
     }
     .nav-item {
       @apply
-        text-lg text-gray-500 font-bold
+        text-base text-gray-500 font-bold
         flex items-center
         h-[100%]
         transition

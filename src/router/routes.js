@@ -8,7 +8,7 @@ const routes = [
   },
   {
     path: '/collections',
-    name: 'Collections',
+    name: 'collections',
     meta: { layout: 'UserLayout' },
     component: () => import('/@/views/collections/CollectionsView.vue'),
   },
@@ -17,6 +17,12 @@ const routes = [
     name: 'Assets',
     meta: { layout: 'UserLayout' },
     component: () => import('/@/views/assets/AssetsView.vue'),
+  },
+  {
+    path: '/category/:name',
+    name: 'Category',
+    meta: { layout: 'UserLayout' },
+    component: () => import('/@/views/category/CategoryView.vue'),
   },
   {
     path: '/rankings',

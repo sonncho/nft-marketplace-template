@@ -28,15 +28,14 @@
 
         <div class="navbar-nav">
           <s-nav-dropdown title="Explore" to="/collections">
-            <s-dropdown-item to="/assets">All NFTs</s-dropdown-item>
-            <s-dropdown-item to="/">Hi</s-dropdown-item>
-            <s-dropdown-item to="/">MyName</s-dropdown-item>
-            <s-dropdown-item to="/">Hi</s-dropdown-item>
+            <s-dropdown-item to="/assets" icon="QueueListIcon">All NFTs</s-dropdown-item>
+            <s-dropdown-item to="/category/art" icon="PaintBrushIcon">Art</s-dropdown-item>
+            <s-dropdown-item to="/category/music" icon="MusicalNoteIcon">Music</s-dropdown-item>
           </s-nav-dropdown>
           <s-nav-dropdown title="Stats" to="/ranking">
             <s-dropdown-item to="/ranking">Ranking</s-dropdown-item>
           </s-nav-dropdown>
-          <s-nav-dropdown title="Resources" to="/learn">
+          <s-nav-dropdown title="Resources" to="/">
             <s-dropdown-item to="/">Learn</s-dropdown-item>
           </s-nav-dropdown>
 
@@ -75,18 +74,15 @@ export default {
   name: 'TheNavbar',
   setup() {
     const searchVal = '';
-
     const onClickButton = () => {
       console.log('clicked!!');
     };
     const onsubmitSearch = () => {
       console.log('change input!!');
     };
-
     const onKeydown = (e) => {
       console.log(e);
     };
-
     const result = reactive({
       searchVal,
       onClickButton,
