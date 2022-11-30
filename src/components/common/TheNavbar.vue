@@ -63,7 +63,15 @@ import { MagnifyingGlassIcon } from '@heroicons/vue/24/solid';
 import { UserCircleIcon, WalletIcon } from '@heroicons/vue/24/outline';
 
 export default {
-  components: { SButton, SDropdown, SNavDropdown, SDropdownItem, MagnifyingGlassIcon, UserCircleIcon, WalletIcon },
+  components: {
+    SButton,
+    SDropdown,
+    SNavDropdown,
+    SDropdownItem,
+    MagnifyingGlassIcon,
+    UserCircleIcon,
+    WalletIcon,
+  },
   name: 'TheNavbar',
   setup() {
     const searchVal = '';
