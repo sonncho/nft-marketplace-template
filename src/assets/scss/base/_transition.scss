@@ -1,0 +1,48 @@
+// --------------------------------
+// fade
+// --------------------------------
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+// --------------------------------
+// fade up and leave fade down
+// --------------------------------
+.fade-up-enter-active, .fade-up-leave-active {
+	transition: all 0.3s ease-in-out;
+}
+.fade-up-leave-active {
+  transition-delay: 0.25s;
+}
+.fade-up-enter-from,
+.fade-up-leave-to {
+  transform: translateY(30px);
+  opacity: 0;
+}
+
+// --------------------------------
+// bonce
+// --------------------------------
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+.bounce-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

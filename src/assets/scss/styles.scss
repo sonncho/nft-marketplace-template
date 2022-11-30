@@ -6,7 +6,8 @@
   // 'abstracts/variables',
   'abstracts/functions',
   'abstracts/mixins';
-
+@import
+	'base/transition';
 @import
 	'components/buttons',
 	'components/dropdown',

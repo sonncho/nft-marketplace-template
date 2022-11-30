@@ -15,8 +15,10 @@
 
         <div class="search-form">
           <input
+            ref="searchInput"
             type="text"
             placeholder="Search Items, collections, and accounts"
+            @keydown="handleFocus"
             v-model="searchVal"
           />
           <span class="search-icon">
@@ -24,38 +26,27 @@
           </span>
         </div>
 
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <RouterLink to="/" class="nav-link">Home</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink to="/about" class="nav-link">Explore</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink to="/stats" class="nav-link">Stats</RouterLink>
-            <!-- <ul class="nav-sub-item">
-              <li class="nav-sub-link">
-                <RouterLink to="/stats">subItem1</RouterLink>
-              </li>
-              <li class="nav-sub-link">
-                <RouterLink to="/stats">subItem</RouterLink>
-              </li>
-              <li class="nav-sub-link">
-                <RouterLink to="/stats">subItem</RouterLink>
-              </li>
-            </ul> -->
-          </li>
-          <li class="nav-item">
-            <RouterLink to="/admin" class="nav-link">Resources</RouterLink>
-          </li>
-          <!-- <li><RouterLink to="/admin">Admin</RouterLink></li> -->
+        <div class="navbar-nav">
+          <s-nav-dropdown title="Explore" to="/collections">
+            <s-dropdown-item to="/assets">All NFTs</s-dropdown-item>
+            <s-dropdown-item to="/">Hi</s-dropdown-item>
+            <s-dropdown-item to="/">MyName</s-dropdown-item>
+            <s-dropdown-item to="/">Hi</s-dropdown-item>
+          </s-nav-dropdown>
+          <s-nav-dropdown title="Stats" to="/ranking">
+            <s-dropdown-item to="/ranking">Ranking</s-dropdown-item>
+          </s-nav-dropdown>
+          <s-nav-dropdown title="Resources" to="/learn">
+            <s-dropdown-item to="/">Learn</s-dropdown-item>
+          </s-nav-dropdown>
+
           <s-button @click="onClickButton" variant="link">
             <UserCircleIcon class="h-8 w-8" />
           </s-button>
           <s-button @click="onClickButton" variant="link">
             <WalletIcon class="h-8 w-8" />
           </s-button>
-        </ul>
+        </div>
       </nav>
     </div>
   </header>
@@ -65,11 +56,14 @@
 import { reactive } from 'vue';
 import SButton from '/@compo/buttons/SButton.vue';
 // import SInput from '/@/components/forms/SInput.vue';
+import SDropdown from '/@compo/dropdown/SDropdown.vue';
+import SNavDropdown from '/@compo/dropdown/SNavDropdown.vue';
+import SDropdownItem from '/@compo/dropdown/SDropdownItem.vue';
 import { MagnifyingGlassIcon } from '@heroicons/vue/24/solid';
 import { UserCircleIcon, WalletIcon } from '@heroicons/vue/24/outline';
 
 export default {
-  components: { SButton, MagnifyingGlassIcon, UserCircleIcon, WalletIcon },
+  components: { SButton, SDropdown, SNavDropdown, SDropdownItem, MagnifyingGlassIcon, UserCircleIcon, WalletIcon },
   name: 'TheNavbar',
   setup() {
     const searchVal = '';
@@ -81,10 +75,15 @@ export default {
       console.log('change input!!');
     };
 
+    const onKeydown = (e) => {
+      console.log(e);
+    };
+
     const result = reactive({
       searchVal,
       onClickButton,
       onsubmitSearch,
+      onKeydown,
     });
     return result;
   },

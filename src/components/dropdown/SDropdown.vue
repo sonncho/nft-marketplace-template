@@ -1,19 +1,27 @@
 <template>
   <div
-    class="dropdown"
-    @mouseenter="isShow = true"
-    @mouseleave="isShow = false"
+    class="dropdown-wrap"
+    @mouseenter="hover ? (isShow = true) : null"
+    @mouseleave="hover ? (isShow = false) : null"
+    @click="!hover ? (isShow = !isShow) : null"
   >
-    <s-button variant="link">My Dropdown Menu</s-button>
-    <transition name="slide">
-      <ul v-if="isShow" class="dropdown-menu">
-        <li class="dropdown-item">
-          <router-link to="/about">submenu 123</router-link>
-        </li>
-        <li class="dropdown-item"><a href="#">submenu 123</a></li>
-        <li class="dropdown-item"><a href="#">submenu 123</a></li>
-        <li class="dropdown-item"><a href="#">submenu 123</a></li>
-      </ul>
+    <s-button :variant="variant">{{ title }}</s-button>
+    <transition :name="effect" duration="550">
+      <div
+        v-if="isShow"
+        class="dropdown"
+        :class="{
+          'left-0': !right,
+          'right-0': right,
+        }"
+      >
+        <ul class="dropdown-menu">
+          <s-dropdown-item>Component Test</s-dropdown-item>
+          <s-dropdown-item>Component Test</s-dropdown-item>
+          <s-dropdown-item>Component Test</s-dropdown-item>
+          <s-dropdown-item>Component Test</s-dropdown-item>
+        </ul>
+      </div>
     </transition>
   </div>
 </template>
@@ -21,11 +29,25 @@
 <script>
 import { ref } from 'vue';
 import SButton from '../buttons/SButton.vue';
+import SDropdownItem from './SDropdownItem.vue';
 export default {
-  components: { SButton },
+  components: { SButton, SDropdownItem },
   name: 'SDropdown',
   props: {
     hover: Boolean,
+    title: String,
+    right: {
+      type: Boolean,
+      default: false,
+    },
+    effect: {
+      type: String,
+      default: 'fade',
+    },
+    variant: {
+      type: String,
+      default: 'link',
+    },
   },
   setup() {
     const isShow = ref(false);

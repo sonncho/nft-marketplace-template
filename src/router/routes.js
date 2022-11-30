@@ -7,6 +7,24 @@ const routes = [
     component: () => import('/@/views/HomeView.vue'),
   },
   {
+    path: '/collections',
+    name: 'Collections',
+    meta: { layout: 'UserLayout' },
+    component: () => import('/@/views/collections/CollectionsView.vue'),
+  },
+  {
+    path: '/assets',
+    name: 'Assets',
+    meta: { layout: 'UserLayout' },
+    component: () => import('/@/views/assets/AssetsView.vue'),
+  },
+  {
+    path: '/rankings',
+    name: 'Rankings',
+    meta: { layout: 'UserLayout' },
+    component: () => import('/@/views/stats/RankingsView.vue'),
+  },
+  {
     path: '/about',
     name: 'about',
     meta: { layout: 'UserLayout' },
