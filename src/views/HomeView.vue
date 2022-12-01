@@ -1,41 +1,33 @@
 <template>
   <main>
-    <BeakerIcon class="h-6 w-6 text-blue-500" />
-    <div class="flex">
-      <div>
-        <p>right hover default:fade</p>
-        <s-dropdown title="dropdown1" variant="primary" right hover />
-      </div>
-      <div>
-        <p>bounce default: left</p>
-        <s-dropdown title="dropdown2" effect="bounce" />
-      </div>
-      <div>
-        <p>slide left</p>
-        <s-dropdown title="dropdown3" effect="slide" left />
-      </div>
-      <div>
-        <p>fade-up hover</p>
-        <s-dropdown title="dropdown4" effect="fade-up" hover />
+    <div class="container mx-auto px-2 :md:px-4 pt-[30px]">
+      <div class="grid lg:grid-cols-2 gap-3">
+        <div class="self-center">
+          <div class="inline border-2 border-gray-200 py-3 px-6 rounded-full text-lg">GANO NFT</div>
+          <h3 class="text-[70px] font-extrabold">Search your rare NFT's by world class artists</h3>
+          <p>
+            Where Bitcoin was hailed as the digital answer to currency, NFTs are now being touted as the digital answer
+            to collectables.
+          </p>
+        </div>
+        <div>
+          <div class="p-12">
+            <s-swiper effect="cube" />
+          </div>
+        </div>
       </div>
     </div>
-    <p class="text-blue-400">tailwindCss 적용 블루</p>
   </main>
 </template>
 
 <script>
 import { ref } from 'vue';
-import { BeakerIcon } from '@heroicons/vue/24/solid';
-import SDropdown from '../components/dropdown/SDropdown.vue';
+import SSwiper from '/@compo/swiper/SSwiper.vue';
 
 export default {
-  components: { BeakerIcon, SDropdown },
-  setup() {
-    const isDropdown = ref(false);
-    const toggleDropdown = () => {
-      isDropdown.value = !isDropdown.value;
-    };
-    return { isDropdown, toggleDropdown };
+  name: 'HomeView',
+  components: {
+    SSwiper,
   },
 };
 </script>

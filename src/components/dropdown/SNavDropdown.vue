@@ -1,11 +1,7 @@
 <template lang="">
-  <ul
-    class="dropdown-wrap nav-item"
-    @mouseenter="isShow = true"
-    @mouseleave="isShow = false"
-  >
+  <ul class="dropdown-wrap nav-item" @mouseenter="isShow = true" @mouseleave="isShow = false">
     <s-dropdown-item :to="to">{{ title }}</s-dropdown-item>
-    <transition name="fade-up" duration="550">
+    <transition name="fade-up">
       <li v-if="isShow" class="dropdown nav-dropdown">
         <ul class="dropdown-menu">
           <slot></slot>

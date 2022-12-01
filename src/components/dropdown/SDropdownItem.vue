@@ -8,12 +8,7 @@
 </template>
 <script>
 import { computed } from 'vue';
-import {
-  RectangleStackIcon,
-  QueueListIcon,
-  PaintBrushIcon,
-  MusicalNoteIcon,
-} from '@heroicons/vue/24/outline';
+import { RectangleStackIcon, QueueListIcon, PaintBrushIcon, MusicalNoteIcon } from '@heroicons/vue/24/outline';
 export default {
   name: 'SDropdownItem',
   components: {

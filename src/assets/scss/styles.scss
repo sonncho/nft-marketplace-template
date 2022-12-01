@@ -6,10 +6,14 @@
   // 'abstracts/variables',
   'abstracts/functions',
   'abstracts/mixins';
+
 @import
-	'base/transition';
+	'base/transition',
+	'base/font';
+
 @import
 	'components/buttons',
+	'components/swiper',
 	'components/dropdown',
 	'components/forms';
 

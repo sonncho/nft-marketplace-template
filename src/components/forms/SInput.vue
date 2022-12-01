@@ -1,11 +1,5 @@
 <template>
-  <input
-    v-bind="$attrs"
-    class="form-control"
-    :type="type"
-    :value="modelValue"
-    @input="updateInput"
-  />
+  <input v-bind="$attrs" class="form-control" :type="type" :value="modelValue" @input="updateInput" />
 </template>
 
 <script>
@@ -16,16 +10,7 @@ export default {
       type: String,
       default: 'text',
       validator: (value) => {
-        const allowed = [
-          'text',
-          'color',
-          'checkbox',
-          'radio',
-          'password',
-          'button',
-          'image',
-          'file',
-        ];
+        const allowed = ['text', 'color', 'checkbox', 'radio', 'password', 'button', 'image', 'file'];
         return allowed.includes(value);
       },
     },

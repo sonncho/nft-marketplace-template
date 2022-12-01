@@ -4,12 +4,8 @@
       <nav class="navbar">
         <div class="nabar-brand mr-12 flex-shrink-0">
           <router-link to="/" class="logo">
-            <img
-              class="inline-block mr-3 align-middle"
-              src="https://flowbite.com/docs/images/logo.svg"
-              alt="logo"
-            />
-            <span class="font-bold text-2xl">LOGO</span>
+            <img class="inline-block mr-3 align-middle" src="https://flowbite.com/docs/images/logo.svg" alt="logo" />
+            <span class="font-bold text-2xl">GANO</span>
           </router-link>
         </div>
 
@@ -40,10 +36,13 @@
           </s-nav-dropdown>
 
           <s-button @click="onClickButton" variant="link">
-            <UserCircleIcon class="h-8 w-8" />
+            <UserCircleIcon class="stroke-2 h-8 w-8" />
           </s-button>
           <s-button @click="onClickButton" variant="link">
-            <WalletIcon class="h-8 w-8" />
+            <WalletIcon class="stroke-2 h-8 w-8" />
+          </s-button>
+          <s-button @click="onClickButton" variant="link">
+            <ShoppingBagIcon class="stroke-2 h-8 w-8" />
           </s-button>
         </div>
       </nav>
@@ -54,22 +53,20 @@
 <script>
 import { reactive } from 'vue';
 import SButton from '/@compo/buttons/SButton.vue';
-// import SInput from '/@/components/forms/SInput.vue';
-import SDropdown from '/@compo/dropdown/SDropdown.vue';
 import SNavDropdown from '/@compo/dropdown/SNavDropdown.vue';
 import SDropdownItem from '/@compo/dropdown/SDropdownItem.vue';
 import { MagnifyingGlassIcon } from '@heroicons/vue/24/solid';
-import { UserCircleIcon, WalletIcon } from '@heroicons/vue/24/outline';
+import { ShoppingBagIcon, UserCircleIcon, WalletIcon } from '@heroicons/vue/24/outline';
 
 export default {
   components: {
     SButton,
-    SDropdown,
     SNavDropdown,
     SDropdownItem,
     MagnifyingGlassIcon,
     UserCircleIcon,
     WalletIcon,
+    ShoppingBagIcon,
   },
   name: 'TheNavbar',
   setup() {

@@ -1,10 +1,8 @@
 <template lang="">
-  <div>
-    assetsView
-  </div>
+  <div>assetsView</div>
 </template>
 <script>
 export default {
   name: 'assetsView',
-}
+};
 </script>
