@@ -3,6 +3,10 @@ import routes from './routes';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  // eslint-disable-next-line no-unused-vars
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 };
+  },
   routes,
 });
 
