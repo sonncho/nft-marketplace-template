@@ -4,7 +4,11 @@
       <nav class="navbar">
         <div class="nabar-brand mr-12 flex-shrink-0">
           <router-link to="/" class="logo">
-            <img class="inline-block mr-3 align-middle" src="https://flowbite.com/docs/images/logo.svg" alt="logo" />
+            <img
+              class="inline-block mr-3 align-middle"
+              src="https://flowbite.com/docs/images/logo.svg"
+              alt="logo"
+            />
             <span class="font-bold text-2xl">GANO</span>
           </router-link>
         </div>
@@ -24,9 +28,15 @@
 
         <div class="navbar-nav">
           <s-nav-dropdown title="Explore" to="/collections">
-            <s-dropdown-item to="/assets" icon="QueueListIcon">All NFTs</s-dropdown-item>
-            <s-dropdown-item to="/category/art" icon="PaintBrushIcon">Art</s-dropdown-item>
-            <s-dropdown-item to="/category/music" icon="MusicalNoteIcon">Music</s-dropdown-item>
+            <s-dropdown-item to="/assets" icon="QueueListIcon"
+              >All NFTs</s-dropdown-item
+            >
+            <s-dropdown-item to="/category/art" icon="PaintBrushIcon"
+              >Art</s-dropdown-item
+            >
+            <s-dropdown-item to="/category/music" icon="MusicalNoteIcon"
+              >Music</s-dropdown-item
+            >
           </s-nav-dropdown>
           <s-nav-dropdown title="Stats" to="/ranking">
             <s-dropdown-item to="/ranking">Ranking</s-dropdown-item>
@@ -35,9 +45,13 @@
             <s-dropdown-item to="/">Learn</s-dropdown-item>
           </s-nav-dropdown>
 
-          <s-button @click="onClickButton" variant="link">
-            <UserCircleIcon class="stroke-2 h-8 w-8" />
-          </s-button>
+          <s-nav-dropdown type="button" icon="UserCircleIcon">
+            <s-dropdown-item to="/">hi?</s-dropdown-item>
+            <s-dropdown-item>
+              <button>버튼입니다.</button>
+            </s-dropdown-item>
+          </s-nav-dropdown>
+
           <s-button @click="onClickButton" variant="link">
             <WalletIcon class="stroke-2 h-8 w-8" />
           </s-button>
@@ -56,7 +70,11 @@ import SButton from '/@compo/buttons/SButton.vue';
 import SNavDropdown from '/@compo/dropdown/SNavDropdown.vue';
 import SDropdownItem from '/@compo/dropdown/SDropdownItem.vue';
 import { MagnifyingGlassIcon } from '@heroicons/vue/24/solid';
-import { ShoppingBagIcon, UserCircleIcon, WalletIcon } from '@heroicons/vue/24/outline';
+import {
+  ShoppingBagIcon,
+  UserCircleIcon,
+  WalletIcon,
+} from '@heroicons/vue/24/outline';
 
 export default {
   components: {

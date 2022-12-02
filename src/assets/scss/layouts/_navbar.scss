@@ -3,6 +3,7 @@
     @apply
       border border-b-gray-200
       fixed
+      z-[1024]
       bg-white dark:bg-gray-900
       w-full;
   }
@@ -15,6 +16,7 @@
       items-center
       mx-auto
       h-[70px];
+
     .navbar-nav {
       @apply flex items-center h-full;
     }

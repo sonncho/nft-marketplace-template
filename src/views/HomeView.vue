@@ -1,13 +1,19 @@
 <template>
   <main>
     <div class="container mx-auto px-2 :md:px-4 pt-[30px]">
-      <div class="grid lg:grid-cols-2 gap-3">
+      <div class="lg:grid lg:grid-cols-2 gap-3">
         <div class="self-center">
-          <div class="inline border-2 border-gray-200 py-3 px-6 rounded-full text-lg">GANO NFT</div>
-          <h3 class="text-[70px] font-extrabold">Search your rare NFT's by world class artists</h3>
+          <div
+            class="inline-block border-2 border-gray-200 py-3 px-6 rounded-full text-lg mb-5"
+          >
+            GANO NFT
+          </div>
+          <h3 class="text-[70px] font-extrabold">
+            Search your rare NFT's by world class artists
+          </h3>
           <p>
-            Where Bitcoin was hailed as the digital answer to currency, NFTs are now being touted as the digital answer
-            to collectables.
+            Where Bitcoin was hailed as the digital answer to currency, NFTs are
+            now being touted as the digital answer to collectables.
           </p>
         </div>
         <div>
