@@ -1,13 +1,9 @@
 <template lang="">
-  <ul
-    class="dropdown-wrap nav-item"
-    @mouseenter="isShow = true"
-    @mouseleave="isShow = false"
-  >
+  <ul class="dropdown-wrap nav-item" @mouseenter="isShow = true" @mouseleave="isShow = false">
     <s-dropdown-item v-if="type === 'link'" :to="to">
       {{ title }}
     </s-dropdown-item>
-    <s-button v-if="type === 'button'" variant="link">
+    <s-button v-if="type === 'button'" variant="link" @click="onClickBtn">
       <component :is="iconComponent" class="w-8 h-8 stroke-2" />
     </s-button>
     <transition name="fade-up">
@@ -21,11 +17,8 @@
 </template>
 <script>
 import { ref, computed } from 'vue';
-import {
-  UserCircleIcon,
-  WalletIcon,
-  ShoppingBagIcon,
-} from '@heroicons/vue/24/outline';
+import { useRouter } from 'vue-router';
+import { UserCircleIcon, WalletIcon, ShoppingBagIcon } from '@heroicons/vue/24/outline';
 import SDropdownItem from './SDropdownItem.vue';
 import SButton from '../buttons/SButton.vue';
 
@@ -57,11 +50,18 @@ export default {
     ShoppingBagIcon,
   },
   setup(props) {
+    const router = useRouter();
     const isShow = ref(false);
     const iconComponent = computed(() => {
       return props.icon || '';
     });
-    return { isShow, iconComponent };
+    const onClickBtn = () => {
+      if (props.to) {
+        router.push(props.to);
+      }
+      return;
+    };
+    return { isShow, iconComponent, onClickBtn };
   },
 };
 </script>

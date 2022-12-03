@@ -4,9 +4,9 @@
       <div class="lg:grid lg:grid-cols-2 gap-3">
         <div class="self-center">
           <div
-            class="inline-block border-2 border-gray-200 py-3 px-6 rounded-full text-lg mb-5"
+            class="inline-block border-2 border-gray-200 py-3 px-6 rounded-full mb-5 text-indigo-500"
           >
-            GANO NFT
+            GANO NFT Marketplace
           </div>
           <h3 class="text-[70px] font-extrabold">
             Search your rare NFT's by world class artists
