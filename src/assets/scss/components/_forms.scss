@@ -34,4 +34,41 @@
       hover:bg-white;
     }
   }
+
+  .switch {
+    @apply
+      inline-block
+      relative
+      m-auto
+      w-[40px] h-[20px]
+      cursor-pointer
+      overflow-hidden;
+    input {
+      @apply
+        absolute -top-[30px] -left-[30px]
+        w-0 h-0;
+      & + span {
+        @apply
+          absolute top-0 bottom-0 left-0 right-0
+          bg-gray-200
+          rounded-full;
+        &:before {
+          @apply
+            content-['']
+            inline-block absolute top-1/2 left-1
+            w-[12px] h-[12px]
+            bg-white
+            rounded-full
+            -translate-y-1/2
+            transition-all duration-300;
+        }
+      }
+      &:checked + span {
+        @apply bg-indigo-600;
+        &:before {
+          @apply left-[24px];
+        }
+      }
+    }
+  }
 }

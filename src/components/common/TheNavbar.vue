@@ -32,13 +32,12 @@
           <s-nav-dropdown type="button" icon="UserCircleIcon" to="/accounts">
             <s-dropdown-item>hi?</s-dropdown-item>
             <li class="dropdown-item">
-              <label class="switch" for="">
-                Dark mode
-                <input type="checkbox" value="false" />
+              <label class="switch" for="switchCheck">
+                <input type="checkbox" name="switch" id="switchCheck" />
+                <span></span>
               </label>
             </li>
           </s-nav-dropdown>
-
           <s-button @click="onClickButton" variant="link">
             <WalletIcon class="stroke-2 h-8 w-8" />
           </s-button>
@@ -83,11 +82,13 @@ export default {
     const onKeydown = (e) => {
       console.log(e);
     };
+    const isChecked = false;
     const result = reactive({
       searchVal,
       onClickButton,
       onsubmitSearch,
       onKeydown,
+      isChecked,
     });
     return result;
   },
