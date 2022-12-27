@@ -8,12 +8,10 @@
           >
             GANO NFT Marketplace
           </div>
-          <h3 class="text-[70px] font-extrabold">
-            Search your rare NFT's by world class artists
-          </h3>
+          <h3 class="text-[70px] font-extrabold">Search your rare NFT's by world class artists</h3>
           <p>
-            Where Bitcoin was hailed as the digital answer to currency, NFTs are
-            now being touted as the digital answer to collectables.
+            Where Bitcoin was hailed as the digital answer to currency, NFTs are now being touted as
+            the digital answer to collectables.
           </p>
         </div>
         <div>

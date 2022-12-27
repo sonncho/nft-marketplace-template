@@ -1,5 +1,5 @@
 <template>
-  <label class="switch">
+  <label>
     <input type="checkbox" v-model="isChecked" />
   </label>
 </template>

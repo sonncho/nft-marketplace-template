@@ -51,10 +51,10 @@ export default {
   setup() {
     const IMGURL = 'https://swiperjs.com/demos/images/';
     const items = [
-      { index: 0, title:'Title1' , owner: 'Owner Name1', imgSrc: `${IMGURL}nature-1.jpg`},
-      { index: 1, title:'Title2' , owner: 'Owner Name2', imgSrc: `${IMGURL}nature-2.jpg`},
-      { index: 2, title:'Title3' , owner: 'Owner Name3', imgSrc: `${IMGURL}nature-3.jpg`},
-      { index: 3, title:'Title4' , owner: 'Owner Name4', imgSrc: `${IMGURL}nature-4.jpg`},
+      { index: 0, title: 'Title1', owner: 'Owner Name1', imgSrc: `${IMGURL}nature-1.jpg` },
+      { index: 1, title: 'Title2', owner: 'Owner Name2', imgSrc: `${IMGURL}nature-2.jpg` },
+      { index: 2, title: 'Title3', owner: 'Owner Name3', imgSrc: `${IMGURL}nature-3.jpg` },
+      { index: 3, title: 'Title4', owner: 'Owner Name4', imgSrc: `${IMGURL}nature-4.jpg` },
     ];
     return {
       // modules: [EffectCube, Pagination, Autoplay],
